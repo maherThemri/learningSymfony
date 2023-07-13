@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{name}} {{firstName}}</title>
-</head>
-
-<body>
-    <h1>with love from {{name}} {{firstName}}</h1>
-    <p>bonjour index</p>
-</body>
-
-</html>
+{% extends 'template.html.twig' %}
+{% block title %}
+First
+{% endblock %}
+{% block body %}
+{% block pageTitle %}
+First
+{% endblock %}
+<h1>with love from {{name}} {{firstName}}</h1>
+<p>bonjour index</p>
+<p>mon url est ( {{url('first')}})</p>
+{% endblock %}

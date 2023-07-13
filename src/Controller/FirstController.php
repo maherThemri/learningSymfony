@@ -9,6 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class FirstController extends AbstractController
 {
+    #[Route('/template', name: 'template')]
+    public function template(): Response
+    {
+        return $this->render('template.html.twig');
+    }
     #[Route('/first', name: 'first')]
     public function index(): Response
     {
@@ -39,7 +44,8 @@ class FirstController extends AbstractController
             'first/hello.html.twig',
             [
                 'nom' => $name,
-                'prenom' => $lastName
+                'prenom' => $lastName,
+                'path' => '          '
             ]
         );
     }
